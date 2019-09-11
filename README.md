@@ -1,7 +1,22 @@
-# React Template
+# Weather app ⛅ ☔
 
-This is a template I use as a quick reference project when I or my friends (or maybe you?) need a quick refresh on setting up a fresh React project.
+This is a personal project to practice advanced React features and libraries.
 
-## License
+## Getting Started
 
-You're free to use this however you want. I don't care.
+1. Install the project dependencies.
+
+```bash
+yarn install
+```
+
+1. Rename `_api_key.js` to `api_key.js`.
+2. Register at openweathermap.org to get your own api key. See: https://openweathermap.org/appid
+3. Put your api key in `api_key.js`.
+4. Start the dev server
+
+```bash
+yarn start
+```
+
+4. Go to http://localhost:8080/
