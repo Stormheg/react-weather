@@ -4,3 +4,5 @@ dist/
 .DS_STORE
 .envrc
 .stylelintcache
+
+api_key.js
