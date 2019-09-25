@@ -1,3 +1,3 @@
-import Weather from './Weather';
+import WeatherList from './WeatherList';
 
-export default Weather;
+export default WeatherList;

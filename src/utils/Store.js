@@ -15,7 +15,7 @@ export const configureStore = () => {
   }
 
   const rootReducer = combineReducers({
-    weather: weatherReducer
+    weatherReducer: weatherReducer
   })
 
   const store = createStore(rootReducer, {}, applyMiddleware(...middleware))

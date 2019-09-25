@@ -5,6 +5,7 @@ import { requestWeather } from '../actions/weather';
 const weatherReducer = handleActions({
   [requestWeather]: (state, action) => {
     if (!action.error) {
+      console.log(action)
       return {
         ...state,
         weather: action.payload.data.list,
@@ -14,7 +15,7 @@ const weatherReducer = handleActions({
     else {
       return {
         ...state,
-        weather: null,
+        weather: [],
         weatherErrorMessage: "🚨🤖 Sorry! The weather could not be fetched! 🤖🚨"
       }
     }
@@ -22,7 +23,7 @@ const weatherReducer = handleActions({
     return state
   }
 }, {
-  weather: null,
+  weather: [],
   weatherErrorMessage: null,
 })
 

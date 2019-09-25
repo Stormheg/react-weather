@@ -1,0 +1,19 @@
+{
+    "timestamp": 1568363052,
+    "now": {
+        "temp": 26,
+        "wind": {
+            "speed_bft": 2,
+            "speed_kmh": 12,
+            "direction": 90
+        },
+        "clouds": {
+            "text": "Overcast"
+        },
+        "rain": {
+            "chance": 10,
+            "millimeter": 2
+        },
+        "need_jacket": false
+    }
+}
