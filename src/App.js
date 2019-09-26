@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { configureStore } from './utils/Store';
 
-import Weather from './routes/Weather';
+import WeatherPage from './routes/WeatherPage';
 
 const store = configureStore()
 
@@ -13,7 +13,7 @@ export default ({ path = '' }) => (
   <Provider store={store}>
     <Router basename={path}>
       <div className="App">
-        <Route exact path="/" component={Weather} />
+        <Route exact path="/" component={WeatherPage} />
       </div>
     </Router>
   </Provider>

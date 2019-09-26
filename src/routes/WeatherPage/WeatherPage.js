@@ -3,9 +3,12 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { requestWeather } from "../../actions/weather";
 
-import WeatherListItem from '../../components/WeatherListItem';
+import { Container } from 'react-bootstrap';
 
-const WeatherList = () => {
+import WeatherListItem from '../../components/WeatherListItem';
+import Header from '../../components/Header';
+
+const WeatherPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(requestWeather({city: 'Zwolle', country: 'nl'}))
@@ -22,12 +25,15 @@ const WeatherList = () => {
 
   return (
     <div>
-      {_getMessage()}
-      {weatherList.map((weather) => (
-        <WeatherListItem key={weather.dt} weather={weather} />
-      ))}
+      <Header />
+      <Container>
+        {_getMessage()}
+        {weatherList.map((weather) => (
+          <WeatherListItem key={weather.dt} weather={weather} />
+        ))}
+      </Container>
     </div>
   )
 };
 
-export default WeatherList;
+export default WeatherPage;
