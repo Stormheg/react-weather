@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     publicPath: '/',
-    path: path.resolve(process.cwd(), "dist/"),
+    path: path.resolve(process.cwd(), "public/"),
     filename: "[name].js"
   },
   module: {
