@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "name": "react-weather"
+  "name": "react-weather",
+  "routes": [
+    {"src": "/(.*)", "dest": "/index.html"}
+  ]
 }
