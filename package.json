@@ -7,8 +7,7 @@
   "author": "Storm Heg <storm@stormheg.co>",
   "scripts": {
     "build": "webpack --config=./config/webpack.production.js",
-    "start": "webpack-dev-server --config=./config/webpack.development.js",
-    "deploy": "cp now.json dist/ && now 'dist/'"
+    "start": "webpack-dev-server --config=./config/webpack.development.js"
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
