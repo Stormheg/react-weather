@@ -4,10 +4,10 @@ const WeatherTableItem = ({entry}) => {
   return (
     <tr>
       <td>{ entry.dt_txt }</td>
-      <td>{ Math.round(entry.main.temp - 273.15) } &deg;</td>
-      <td>{ entry.main.humidity }%</td>
+      <td className="text-right">{ Math.round(entry.main.temp - 273.15) } &deg;</td>
+      <td className="text-right">{ entry.main.humidity }%</td>
       <td>{ entry.weather[0].description }</td>
-      <td>{ entry.wind.speed } km/h</td>
+      <td className="text-right">{ entry.wind.speed } km/h</td>
     </tr>
   );
 };

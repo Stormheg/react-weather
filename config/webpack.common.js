@@ -10,6 +10,7 @@ module.exports = {
     app: "./src/index.js"
   },
   output: {
+    publicPath: '/',
     path: path.resolve(process.cwd(), "dist/"),
     filename: "[name].js"
   },
