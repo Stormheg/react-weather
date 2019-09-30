@@ -16,7 +16,7 @@ export default ({ path = '' }) => (
     <Router basename={path}>
       <div className="App">
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/forecast/:city" component={WeatherPage} />
+        <Route exact path="/forecast/:city?" component={WeatherPage} />
       </div>
     </Router>
   </Provider>
