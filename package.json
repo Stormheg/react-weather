@@ -7,7 +7,8 @@
   "author": "Storm Heg <storm@stormheg.co>",
   "scripts": {
     "build": "webpack --config=./config/webpack.production.js",
-    "start": "webpack-dev-server --config=./config/webpack.development.js"
+    "start": "webpack-dev-server --config=./config/webpack.development.js",
+    "deploy": "cp now.json dist/ && now 'dist/'"
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
@@ -22,6 +23,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
+    "now": "^16.3.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "react": "^16.9.0",
