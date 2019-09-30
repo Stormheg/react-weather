@@ -1,4 +1,5 @@
 {
   "version": 2,
-  "name": "react-weather"
+  "name": "react-weather",
+  "config": { "distDir": "./dist" }
 }
