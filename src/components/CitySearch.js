@@ -16,7 +16,7 @@ const CitySearch = ({ history }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (cityInput) {
+    if (cityInput && countryInput) {
       dispatch(clearWeather());
       dispatch(requestWeather({ city: cityInput, country: countryInput }));
       history.push(`/forecast/${cityInput}?country=${countryInput}`);
@@ -37,10 +37,10 @@ const CitySearch = ({ history }) => {
           type="text"
           value={countryInput}
           onChange={handleCountryInputChange}
-          placeholder="Country shortcode (e.g. us)"
+          placeholder="us"
           className="mr-sm-2"
         />
-        <Button variant="outline-success" type="submit">
+        <Button variant="outline-primary" type="submit">
           Search
         </Button>
       </Form.Group>
