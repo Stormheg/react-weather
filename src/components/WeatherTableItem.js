@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatRelative } from "date-fns";
 
 import arrow from '../assets/arrow.svg';
 import { kmhToBeafortScale } from '../utils/windSpeedConverter';
@@ -9,11 +10,13 @@ const WeatherTableItem = ({entry}) => {
     transform: `rotateZ(${entry.wind.deg}deg)`
   }
 
+  const timeString = formatRelative(new Date(entry.dt*1000), new Date())
+  
   const beafort = kmhToBeafortScale(entry.wind.speed)
 
   return (
     <tr>
-      <td>{ entry.dt_txt }</td>
+      <td>{ timeString }</td>
       <td className="text-right">{ Math.round(entry.main.temp - 273.15) } &deg;</td>
       <td className="text-right">{ entry.main.humidity }%</td>
       <td>{ entry.weather[0].description }</td>
