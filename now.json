@@ -3,6 +3,11 @@
   "name": "react-weather",
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "/.*", "dest": "/index.html" },
+    {
+      "src": "/*.(js|css|png|jpg|svg)$",
+      "headers": { "cache-control": "public s-max-age=604800" },
+      "dest": "/$1"
+    }
   ]
 }
