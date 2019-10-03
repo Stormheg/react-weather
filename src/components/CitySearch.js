@@ -30,7 +30,7 @@ const CitySearch = ({ history }) => {
           type="text"
           value={cityInput}
           onChange={handleCityInputChange}
-          placeholder="Any city..."
+          placeholder="Any city"
           className="mr-sm-2"
           aria-label="City"
         />
