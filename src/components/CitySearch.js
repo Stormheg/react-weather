@@ -31,7 +31,7 @@ const CitySearch = ({ history }) => {
           value={cityInput}
           onChange={handleCityInputChange}
           placeholder="Any city"
-          className="mr-sm-2"
+          className="mr-sm-2 my-1"
           aria-label="City"
         />
         <FormControl
@@ -39,10 +39,10 @@ const CitySearch = ({ history }) => {
           value={countryInput}
           onChange={handleCountryInputChange}
           placeholder="us"
-          className="mr-sm-2"
+          className="mr-sm-2 my-1"
           aria-label="Country"
         />
-        <Button variant="outline-primary" type="submit">
+        <Button className="my-1" variant="outline-primary" type="submit">
           Get forecast
         </Button>
       </Form.Group>
