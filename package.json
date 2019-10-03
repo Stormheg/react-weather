@@ -1,6 +1,6 @@
 {
-  "name": "react-template",
-  "description": "React template",
+  "name": "Weather app react",
+  "description": "Weather app written in React",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
