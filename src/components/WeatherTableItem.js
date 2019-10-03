@@ -19,7 +19,11 @@ const WeatherTableItem = ({entry}) => {
       <td>{ timeString }</td>
       <td className="text-right">{ Math.round(entry.main.temp - 273.15) } &deg;</td>
       <td className="text-right">{ entry.main.humidity }%</td>
-      <td>{ entry.weather[0].description }</td>
+      <td>
+      <p>{ entry.weather[0].description }</p>
+      <img src={`http://openweathermap.org/img/w/${entry.weather[0].icon}.png`} alt={entry.weather[0].description} />
+
+      </td>
       <td className="text-right">
         <p title={`${entry.wind.speed} km/h`}>{ beafort } bft</p>
         <img src={arrow} alt={ `Arrow indicating ${entry.wind.deg} degrees`} style={arrowStyle} />
