@@ -21,7 +21,7 @@ const WeatherTableItem = ({entry}) => {
       <td className="text-right">{ entry.main.humidity }%</td>
       <td>
       <p>{ entry.weather[0].description }</p>
-      <img src={`http://openweathermap.org/img/w/${entry.weather[0].icon}.png`} alt={entry.weather[0].description} />
+      <img src={`https://openweathermap.org/img/w/${entry.weather[0].icon}.png`} alt={entry.weather[0].description} />
 
       </td>
       <td className="text-right">
