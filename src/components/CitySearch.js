@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { Form, FormControl, Button } from "react-bootstrap";
 
-import { requestWeather } from "../actions/weather";
+import { requestWeather, clearWeather } from "../actions/weather";
 
 const CitySearch = ({ history }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -13,6 +13,7 @@ const CitySearch = ({ history }) => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchInput) {
+      dispatch(clearWeather());
       dispatch(requestWeather({ city: searchInput, country: "nl" }));
       history.push(`/forecast/${searchInput}`);
     }

@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions';
 
-import { requestWeather } from '../actions/weather';
+import { requestWeather, clearWeather } from '../actions/weather';
 
 const weatherReducer = handleActions({
   [requestWeather]: (state, action) => {
@@ -15,12 +15,20 @@ const weatherReducer = handleActions({
       return {
         ...state,
         weather: [],
-        weatherErrorMessage: "🚨🤖 Sorry! The weather could not be fetched! 🤖🚨"
+        weatherErrorMessage: "🚨🤖 Sorry! The weather could not be fetched! 🤖🚨",
       }
     }
     // Default
     return state
-  }
+  },
+
+  [clearWeather]: (state, action) => {
+    return {
+      ...state,
+      weather: [],
+      weatherErrorMessage: null,
+    }
+  },
 }, {
   weather: [],
   weatherErrorMessage: null,
