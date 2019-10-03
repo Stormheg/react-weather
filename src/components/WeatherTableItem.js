@@ -18,7 +18,7 @@ const WeatherTableItem = ({entry}) => {
       <td className="text-right">{ entry.main.humidity }%</td>
       <td>{ entry.weather[0].description }</td>
       <td className="text-right">
-        { beafort } bft <br/>
+        <p title={`${entry.wind.speed} km/h`}>{ beafort } bft</p>
         <img src={arrow} alt={ `Arrow indicating ${entry.wind.deg} degrees`} style={arrowStyle} />
       </td>
     </tr>

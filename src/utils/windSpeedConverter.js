@@ -42,6 +42,7 @@ const kmhToBeafortScale = kmh => {
   else if (kmh > 117) {
     return 12
   }
+  return -1
 }
 
 export { kmhToBeafortScale };
