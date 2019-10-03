@@ -12,7 +12,7 @@ const WeatherTable = ({ entries = [] }) => {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>Time</th>
+          <th>Time (your local time)</th>
           <th>Temperature</th>
           <th>Humidity</th>
           <th>Clouds</th>
