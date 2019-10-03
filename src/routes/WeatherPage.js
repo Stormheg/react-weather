@@ -16,14 +16,20 @@ const WeatherPage = ({ match, history, location }) => {
   const error = useSelector(state => state.weatherReducer.weatherErrorMessage);
 
   // Get city or redirect to default city
-  const city = match.params.city ? match.params.city : history.push("/forecast/Zwolle?country=nl");  
+  const city = match.params.city
+    ? match.params.city
+    : history.push("/forecast/Zwolle?country=nl");
+
   const query = new URLSearchParams(location.search);
-  const country = query.get('country') ? query.get('country') : history.push("/forecast/Zwolle?country=nl");
+
+  const country = query.get("country")
+    ? query.get("country")
+    : history.push("/forecast/Zwolle?country=nl");
 
   useEffect(() => {
     // Only get the weather if there is nothing in state and there was no error
     if (!weatherList.length > 0 && !error) {
-      dispatch(requestWeather({ city, country}));
+      dispatch(requestWeather({ city, country }));
     }
   }, []);
 
@@ -36,18 +42,19 @@ const WeatherPage = ({ match, history, location }) => {
       <Header />
       <Container>
         <Link to="/">&#x2190;Back home</Link>
-        <h2 className="my-3">This week's forecast for {city}, {country}</h2>
+        <h2 className="my-3">
+          This week's forecast for {city}, {country}
+        </h2>
         <div className="my-2">
           <CitySearch />
         </div>
         {(() => {
           if (weatherList.length > 0) {
-            return <WeatherTable entries={weatherList} />
+            return <WeatherTable entries={weatherList} />;
+          } else if (error) {
+            return _getAlert();
           }
-          else if (error) {
-            return _getAlert()
-          }
-          return <p>Loading weather information...</p>
+          return <p>Loading weather information...</p>;
         })()}
       </Container>
     </>

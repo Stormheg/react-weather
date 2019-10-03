@@ -1,12 +1,12 @@
 import React from "react";
-import Table from "react-bootstrap/Table"
+import Table from "react-bootstrap/Table";
 
 import WeatherTableItem from "./WeatherTableItem";
 
 const WeatherTable = ({ entries = [] }) => {
-  const tableEntries = entries.map((entry) =>
+  const tableEntries = entries.map(entry => (
     <WeatherTableItem entry={entry} key={entry.dt} />
-  );
+  ));
 
   return (
     <Table striped bordered hover>
@@ -19,9 +19,7 @@ const WeatherTable = ({ entries = [] }) => {
           <th>Wind</th>
         </tr>
       </thead>
-      <tbody>
-        {tableEntries}
-      </tbody>
+      <tbody>{tableEntries}</tbody>
     </Table>
   );
 };

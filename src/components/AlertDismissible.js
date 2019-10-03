@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Alert } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Alert } from "react-bootstrap";
 
 const AlertDismissible = ({ children }) => {
   const [show, setShow] = useState(true);
@@ -7,11 +7,11 @@ const AlertDismissible = ({ children }) => {
   if (show) {
     return (
       <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-        { children }
+        {children}
       </Alert>
     );
   }
-  return null
-}
+  return null;
+};
 
 export default AlertDismissible;

@@ -14,7 +14,7 @@ const CitySearch = ({ history }) => {
   const handleCityInputChange = e => setCityInput(e.target.value);
   const handleCountryInputChange = e => setCountryInput(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     if (cityInput && countryInput) {
       dispatch(clearWeather());

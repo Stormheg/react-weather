@@ -21,12 +21,16 @@ const NotFoundPage = ({ history }) => {
               <hr className="my-5" />
             </Col>
             <Col xs>
-              <img height="200px" title="Image by undraw.co" src={wanderer} alt="Wanderering thinker illustraion" />
+              <img
+                height="200px"
+                title="Image by undraw.co"
+                src={wanderer}
+                alt="Wanderering thinker illustraion"
+              />
             </Col>
           </Row>
         </Container>
       </Jumbotron>
-      
     </>
   );
 };
