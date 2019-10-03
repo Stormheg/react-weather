@@ -10,18 +10,20 @@ import AlertDismissible from "../components/AlertDismissible";
 import WeatherTable from "../components/WeatherTable";
 import Header from "../components/Header";
 
-const WeatherPage = ({ match, history }) => {
+const WeatherPage = ({ match, history, location }) => {
   const dispatch = useDispatch();
   const weatherList = useSelector(state => state.weatherReducer.weather);
   const error = useSelector(state => state.weatherReducer.weatherErrorMessage);
 
   // Get city or redirect to default city
-  const city = match.params.city ? match.params.city : history.push("/forecast/Zwolle");
+  const city = match.params.city ? match.params.city : history.push("/forecast/Zwolle?country=nl");  
+  const query = new URLSearchParams(location.search);
+  const country = query.get('country') ? query.get('country') : history.push("/forecast/Zwolle?country=nl");
 
   useEffect(() => {
     // Only get the weather if there is nothing in state and there was no error
     if (!weatherList.length > 0 && !error) {
-      dispatch(requestWeather({ city, country: "nl" }));
+      dispatch(requestWeather({ city, country}));
     }
   }, []);
 
@@ -34,7 +36,7 @@ const WeatherPage = ({ match, history }) => {
       <Header />
       <Container>
         <Link to="/">&#x2190;Back home</Link>
-        <h2 className="my-3">This week's forecast for {city}</h2>
+        <h2 className="my-3">This week's forecast for {city}, {country}</h2>
         <div className="my-2">
           <CitySearch />
         </div>
