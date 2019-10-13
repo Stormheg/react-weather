@@ -24,4 +24,6 @@ yarn start
 
 ## License
 
-The source code for this project is licensed under MIT. See [LICENSE](LICENSE) for more information.
+The source code for this project is licensed under MIT.
+
+See [LICENSE](LICENSE) for more information.
