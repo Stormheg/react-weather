@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createAction } from "redux-actions";
 
-import API_KEY from "../../api_key";
+const API_KEY = "0ed9678f1a8e8aba822086a296312050" // Since I am here for the taking I guess you should steal me.
 
 export const requestWeather = createAction("REQUEST_WEATHER", data => {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${data.city},${data.country}&mode=json&APPID=${API_KEY}`;
